@@ -2,7 +2,11 @@ package com.naveen.librarybook.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
+
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -128,5 +132,6 @@ public class BookServiceTest {
         Boolean result = bookService.deleteBook(book.getId());
         assertThat(result).isEqualTo(true);
     }
+
 
 }
